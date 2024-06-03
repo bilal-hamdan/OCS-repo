@@ -158,7 +158,8 @@ body {
   width: 50%;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 32%;
+  background-position: center;
+  margin: 20px;
 }
 .landing .intro-text {
   position: absolute;
@@ -237,12 +238,11 @@ body {
   .services .services-content {
     grid-template-columns: 1fr;
   }
-  .landing .intro-text {
-    left: 50%;
-    top: 50%;
-  }
-  .pfp {
-    display: none;
+  .features .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+    grid-gap: 20px;
   }
 }
 .services .services-content .srv i {
@@ -338,6 +338,13 @@ body {
 @media (max-width: 991px) {
   .about .about-content .image {
     margin: 0 auto 60px;
+  }
+  .pfp {
+    display: none;
+  }
+  .landing .intro-text {
+    left: 50%;
+    top: 50%;
   }
 }
 .about .about-content .image::before {
