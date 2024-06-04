@@ -13,6 +13,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -45,13 +46,117 @@ body {
 }
 /* End Global Rules */
 /* Start Components */
+.navbar-default {
+  border-color: transparent;
+  background-color: var(--secondary-color);
+}
+
+.navbar-default .navbar-brand {
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  color: var(--main-color);
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active {
+  color: #fec503;
+}
+
+.navbar-default .navbar-collapse {
+  border-color: rgba(255, 255, 255, 0.02);
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #1ee2e7;
+  background-color: #1ee2e7;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #1ee2e7;
+}
+.navbar-toggler {
+  color: #ebeced !important;
+  border: #ebeced !important;
+}
+.navbar-default .nav li a {
+  text-transform: uppercase;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus {
+  outline: 0;
+  color: #1ee2e7;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  border-radius: 0;
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #17d0d5;
+}
+.navbar-nav {
+  margin: auto !important;
+}
+@media (min-width: 768px) {
+  .navbar-default {
+    padding: 25px 0;
+    border: 0;
+    background-color: transparent;
+    -webkit-transition: padding 0.3s;
+    -moz-transition: padding 0.3s;
+    transition: padding 0.3s;
+  }
+
+  .navbar-default .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  .navbar-default .navbar-nav > .active > a {
+    border-radius: 3px;
+  }
+
+  .navbar-default.navbar-shrink {
+    padding: 10px 0;
+    background-color: #222;
+  }
+
+  .navbar-default.navbar-shrink .navbar-brand {
+    font-size: 1.5em;
+  }
+}
+.nav-bg {
+  background-color: var(--secondary-color);
+}
+.nav-color {
+  color: white !important;
+}
+.navbar-brand img {
+  width: 50px;
+}
 .special-heading {
-  color: #ebeced;
-  font-size: 100px;
+  color: var(--main-color);
+  font-size: 90px;
   text-align: center;
   font-weight: 800;
   letter-spacing: -3px;
-  margin: 0;
+  margin-bottom: 30px;
 }
 .special-heading + p {
   margin: -30px 0 0;
@@ -69,6 +174,9 @@ body {
 }
 /* End Components */
 /* Start Header */
+.nav-item :hover {
+  color: var(--main-color) !important;
+}
 .header {
   padding: 20px;
 }
@@ -76,6 +184,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
 }
 .header .logo {
   width: 60px;
@@ -190,6 +299,7 @@ body {
 .features h1 {
   text-align: center;
   color: var(--main-color);
+  font-weight: bold;
 }
 .features .container {
   display: grid;
@@ -300,6 +410,7 @@ body {
 }
 .portfolio .portfolio-content .card img {
   max-width: 100%;
+  height: 260px;
 }
 .portfolio .portfolio-content .card .info {
   padding: 20px;
@@ -311,6 +422,9 @@ body {
   color: #777;
   line-height: 1.6;
   margin-bottom: 0;
+}
+.portfolio .portfolio-content .card .info a img {
+  color: var(--main-color) !important;
 }
 /* End Portfolio */
 /* Start About */
@@ -329,6 +443,9 @@ body {
     flex-direction: column;
     text-align: center;
   }
+  .about-content .image {
+    display: none;
+  }
 }
 .about .about-content .image {
   position: relative;
@@ -336,9 +453,6 @@ body {
   height: 375px;
 }
 @media (max-width: 991px) {
-  .about .about-content .image {
-    margin: 0 auto 60px;
-  }
   .pfp {
     display: none;
   }
@@ -358,15 +472,15 @@ body {
   z-index: -1;
 }
 .about .about-content .image::after {
-  top: -40px;
+  top: -30px;
   content: "";
   position: absolute;
   width: 120px;
-  height: 300px;
+  height: 430px;
   border-left: 80px solid var(--main-color);
   border-bottom: 80px solid var(--main-color);
   z-index: -1;
-  right: -150px;
+  right: -80px;
 }
 @media (max-width: 991px) {
   .about .about-content .image::before,
