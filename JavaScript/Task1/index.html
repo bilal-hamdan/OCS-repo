@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>JavaScript Introduction</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>JavaScript</h1>
+      <p>Please enter the two numbers and operation for the ecuation !</p>
+      <div>
+        <form name="myForm">
+          <h2>Part1</h2>
+          Number1: <input type="number" name="number1" value="0" />
+          <select name="operation" id="opiration">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+          <!-- Opiration:<input type="text" name="opiration" /> Number2: -->
+          <input type="number" name="number2" value="0" />
+          <br /><br />
+          <div id="ecuation"></div>
+          <h2>Part2</h2>
+          mark: <input type="mark" name="mark" value="0" />
+        </form>
+        <br />
+        <input type="submit" value="Submit" onclick=" opiration()" /><br />
+        <div id="mark"></div>
+        <br />
+      </div>
+      <br />
+      <h3>Part3</h3>
+      <div id="result"></div>
+    </div>
+  </body>
+</html>
