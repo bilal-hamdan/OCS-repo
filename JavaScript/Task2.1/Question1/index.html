@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Task2</title>
+    <script src="script.js" defer></script>
+
+    <style>
+      .container {
+        margin: 10px;
+      }
+      .bmi button {
+        position: relative;
+        left: 47%;
+      }
+      .bmi form,
+      h3 {
+        width: 60%;
+        margin: 15px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+      .inputs {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        border-bottom: solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="bmi">
+        <h3>BMI Calculater</h3>
+        <form id="bmi">
+          <div class="inputs">
+            <label for="weight">Enter Weight (in KG):</label>
+            <input name="weight" type="number" min="0" />
+          </div>
+          <div class="inputs">
+            <label for="height">Enter Hight (in Merters):</label>
+            <input name="height" type="number" min="0" />
+          </div>
+        </form>
+        <button onclick="bmi()">submit</button>
+      </div>
+      <hr />
+    </div>
+  </body>
+</html>
