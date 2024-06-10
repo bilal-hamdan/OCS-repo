@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="res"></h1>
+
+    <script>
+      n = prompt("enter a number");
+      function isPandigital(number) {
+        let digits = new Set();
+
+        for (let char of number) {
+          digits.add(char);
+        }
+
+        for (let i = 0; i <= 9; i++) {
+          if (!digits.has(i.toString())) {
+            return false;
+          }
+        }
+
+        return true;
+      }
+      document.getElementById("res").innerText = isPandigital(n);
+    </script>
+  </body>
+</html>
