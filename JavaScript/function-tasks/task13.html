@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="res"></h1>
+    <script>
+      let arr = [];
+      for (let i = 0; i < 5; i++) {
+        arr[i] = prompt("enter a string");
+      }
+
+      function samelength(ar) {
+        let shortest = ar[0];
+
+        // Loop through the array to find the shortest string
+        for (let i = 0; i < ar.length; i++) {
+          if (ar[i].length < shortest.length) {
+            shortest = ar[i];
+          }
+        }
+        console.log(shortest);
+        document.getElementById("res").innerText = shortest;
+      }
+      onload = samelength(arr);
+    </script>
+  </body>
+</html>

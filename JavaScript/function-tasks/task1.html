@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="res"></h1>
+    <script>
+      onload = getData;
+      function getData() {
+        let job = prompt("enter job");
+        let partner = prompt("enter partner's name");
+        let location = prompt("enter location");
+        let num = parseInt(prompt("enter numer of children"));
+        tellFortune(job, partner, location, num);
+      }
+
+      function tellFortune(j, p, l, n) {
+        document.getElementById(
+          "res"
+        ).innerText = `You will be a ${j}  in ${l}, and married to ${p} with ${n} kids.`;
+      }
+    </script>
+  </body>
+</html>

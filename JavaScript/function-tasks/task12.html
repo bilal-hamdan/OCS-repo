@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="res"></h1>
+    <script>
+      let num1 = parseFloat(prompt("enter a number"));
+      let num2 = parseFloat(prompt("enter another number"));
+      let num3 = parseFloat(prompt("enter a third number"));
+
+      function largerNubmer(n1, n2, n3) {
+        if (n1 >= n2) {
+          if (n1 > n3) {
+            document.getElementById("res").innerText = `${num1} is the largest`;
+          } else {
+            document.getElementById("res").innerText = `${n3} is the largest`;
+          }
+        } else {
+          if (n2 >= n3) {
+            document.getElementById("res").innerText = `${n2} is the largest`;
+          } else {
+            document.getElementById("res").innerText = `${n3} is the largest`;
+          }
+        }
+      }
+      onload = largerNubmer(num1, num2, num3);
+    </script>
+  </body>
+</html>

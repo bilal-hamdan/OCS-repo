@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="res"></h1>
+    <script>
+      let num1 = parseFloat(prompt("enter a number"));
+
+      function iseven(num1) {
+        console.log(typeof num1);
+        if (num1 >= 0) {
+          document.getElementById("res").innerText = `${num1}`;
+        } else if (num1 < 0) {
+          document.getElementById("res").innerText = `${-num1} `;
+        } else {
+          document.getElementById("res").innerText = `not a number`;
+        }
+      }
+      onload = iseven(num1);
+    </script>
+  </body>
+</html>

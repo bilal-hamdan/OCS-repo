@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="res"></h1>
+    <script>
+      let string1 = prompt("enter a number");
+      let string2 = prompt("enter another number");
+
+      function samelength(s1, s2) {
+        console.log(s1.length);
+        if (s1.length == s2.length) {
+          document.getElementById("res").innerText = "same length";
+        } else {
+          document.getElementById("res").innerText = "not same length";
+        }
+      }
+      onload = samelength(string1, string2);
+    </script>
+  </body>
+</html>

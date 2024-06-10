@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="res"></h1>
+    <script>
+      let c = 0;
+      function counter(n) {
+        if (n == 3) {
+          document.getElementById("res").innerText += "end of counter";
+          console.log("end of counter");
+        } else {
+          n++;
+          document.getElementById("res").innerText += `${n} \n `;
+          console.log(c);
+
+          counter(n);
+        }
+      }
+      onload = counter(c);
+    </script>
+  </body>
+</html>

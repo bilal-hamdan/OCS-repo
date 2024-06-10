@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="res"></h1>
+    <script>
+      let age = parseFloat(prompt("enter age"));
+      let suply = parseFloat(prompt("enter number of tea cup consumed aday :"));
+      function calculateSupply(a, s) {
+        s *= 365 * (100 - a);
+        console.log(s);
+        document.getElementById(
+          "res"
+        ).innerText = `You will need ${s} cups of tea to last you until the ripe old age of 100`;
+      }
+      onload = calculateSupply(age, suply);
+    </script>
+  </body>
+</html>
